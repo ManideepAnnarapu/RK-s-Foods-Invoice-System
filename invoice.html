@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invoice - RK Foods</title>
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="invoice.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="images/logo.jpg" alt="RK Foods Logo" class="nav-logo" />
+      <span class="nav-title">RK Foods Invoice System</span>
+    </div>
+    <div class="nav-right">
+      <a href="admin.html" class="nav-link">Admin</a>
+      <a href="invoice.html" class="nav-link">Invoice</a>
+    </div>
+  </div>
+
+  <!-- INVOICE -->
+  <div class="invoice-container" id="invoiceContent">
+    
+    <!-- Header with Business Info -->
+    <div class="invoice-header">
+      <div class="logo-section">
+        <img src="images/header.png" class="logo" alt="Business Logo" />
+        <div class="company-info">
+          <h2>RK's Foods</h2>
+          <p>Holly Springs, North Carolina, USA<br>+1 919 342 8938<br>rksfoodsllc@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Billing Info -->
+    <div class="bill-info">
+      <div>
+        <h4>From:</h4>
+        <p>RK's Foods<br>Holly Springs, North Carolina</p>
+      </div>
+      <div>
+        <h4>Invoice Date:</h4>
+        <p id="invoiceDate"></p>
+      </div>
+      <div>
+        <h4>Bill To:</h4>
+        <p id="billToStore"></p>
+      </div>
+    </div>
+
+    <!-- Item Table -->
+    <table id="invoiceTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity (lbs)</th>
+          <th>Price/lb</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled by JS -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" class="total-label">Total</td>
+          <td id="totalAmount">$0.00</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Payment Info and QR Code Section -->
+<div class="invoice-bottom">
+  <div class="payment-flex">
+    <div class="payment-details">
+      <p><strong>Total Amount Due:</strong> <span id="bottomTotal">$0.00</span></p>
+      <p>Payment Terms: Due upon receipt</p>
+      <p>Payment Method: Zelle - 815-508-4505</p>
+    </div>
+    <div class="qr-wrapper">
+      <img src="images/qr.jpg" class="qr" alt="QR Code" />
+    </div>
+  </div>
+</div>
+
+    <!-- Footer Quote -->
+    <div class="invoice-footer">
+      <p>"Always Fresh and Flavorful..!"</p>
+    </div>
+  </div>
+
+  <!-- Download Button -->
+  <div class="download-button">
+    <button id="downloadBtn">Download Invoice PDF</button>
+  </div>
+
+  <!-- JS File -->
+  <script src="invoice.js"></script>
+</body>
+</html>

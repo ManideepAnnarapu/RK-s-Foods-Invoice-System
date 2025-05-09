@@ -1,0 +1,194 @@
+/* GLOBAL STYLES */
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* MAIN CARD CONTAINER */
+.admin-container {
+  max-width: 960px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADINGS */
+h2, h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* STORE NAME INPUT */
+.store-name-input {
+  display: block;
+  margin: 0 auto 25px auto;
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 360px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline-color: #007bff;
+  transition: box-shadow 0.2s ease;
+}
+
+.store-name-input:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* FORM */
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+form input {
+  padding: 12px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline-color: #007bff;
+  transition: box-shadow 0.2s ease;
+}
+
+form input:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+form button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+}
+
+table td input[type="number"] {
+  padding: 6px;
+  width: 70px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ZEBRA ROWS */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #dc3545;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.25);
+  color: #b61b2d;
+}
+
+/* FINALIZE BUTTON */
+.finalize-button {
+  display: block;
+  margin: 35px auto 0 auto;
+  padding: 14px 28px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.finalize-button:hover {
+  background-color: #218838;
+  transform: scale(1.02);
+}

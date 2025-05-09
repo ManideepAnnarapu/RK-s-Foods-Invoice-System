@@ -1,0 +1,242 @@
+/* GLOBAL LAYOUT */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  font-size: 12pt;
+}
+
+/* INVOICE CONTAINER */
+.invoice-container {
+  width: 210mm; /* A4 width */
+  max-width: 100%;
+  margin: 20mm auto;
+  background-color: #ffffff;
+  padding: 20mm;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* INVOICE HEADER */
+.invoice-header {
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  border-radius: 6px;
+}
+
+.company-info {
+  text-align: right;
+  font-size: 14px;
+  color: #444;
+}
+
+/* BILLING INFO */
+.bill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bill-info h4 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* TABLE STYLING */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+tfoot {
+  font-weight: bold;
+  background-color: #f0f8ff;
+}
+
+.total-label {
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* PAYMENT + QR SECTION */
+.invoice-bottom {
+  margin-top: 40px;
+}
+
+.payment-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.payment-details {
+  flex: 1 1 60%;
+  font-size: 14px;
+  color: #333;
+  min-width: 280px;
+  line-height: 1.6;
+}
+
+.payment-details p {
+  margin: 4px 0;
+}
+
+.payment-details strong {
+  font-weight: 600;
+}
+
+.qr-wrapper {
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.qr {
+  width: 90px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* FOOTER QUOTE */
+.invoice-footer {
+  background-color: #002b5c; /* Deep Navy Blue */
+  color: #ffffff;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI Semibold', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-top: 4px solid #007bff;
+}
+
+
+
+/* DOWNLOAD BUTTON */
+.download-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.download-button button {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button button:hover {
+  background-color: #218838;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* PRINT SUPPORT */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: white;
+  }
+
+  .navbar,
+  .download-button {
+    display: none !important;
+  }
+
+  .invoice-container {
+    box-shadow: none;
+    margin: 0;
+    width: 210mm;
+    padding: 20mm;
+  }
+
+  .payment-flex {
+    flex-wrap: nowrap;
+    gap: 60px;
+  }
+
+  .qr-wrapper {
+    margin-left: auto;
+  }
+
+  .invoice-footer {
+    margin-top: 30px;
+    border-top: 2px solid #007bff;
+  }
+}

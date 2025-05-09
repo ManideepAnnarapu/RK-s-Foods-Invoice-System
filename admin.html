@@ -1,0 +1,60 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - RK Foods Invoice</title>
+  <link rel="stylesheet" href="./header.css" />
+  <link rel="stylesheet" href="./admin.css" />
+</head>
+<body>
+
+  <!-- EMBEDDED HEADER -->
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="images/logo.jpg" alt="RK Foods Logo" class="nav-logo" />
+      <span class="nav-title">RK Foods Invoice System</span>
+    </div>
+    <div class="nav-right">
+      <a href="admin.html" class="nav-link">Admin</a>
+      <a href="invoice.html" class="nav-link">Invoice</a>
+    </div>
+  </div>
+  <div style="text-align: center; margin-bottom: 20px;">
+    <input type="text" id="storeName" placeholder="Enter Store Name" class="store-name-input" />
+
+  </div>
+  
+  <!-- ADMIN SECTION -->
+  <div class="admin-container">
+    <h2>Enter Item Details</h2>
+    <form id="itemForm">
+      <input type="text" id="itemName" placeholder="Item Name" required />
+      <input type="number" id="itemQty" placeholder="Quantity (lbs)" required />
+      <input type="number" id="itemPrice" placeholder="Price per lb" required />
+      <button type="submit">Add Item</button>
+    </form>
+
+    <h3>Current Items</h3>
+    <table id="itemTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price per lb</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populated by JS -->
+      </tbody>
+    </table>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="finalizeInvoice" class="finalize-button">Add to Invoice</button>
+  </div>
+  
+  <script src="admin.js"></script>
+</body>
+</html>
